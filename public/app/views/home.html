@@ -1,0 +1,19 @@
+<div ng-controller="MainCtrl" class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="page-header">
+            <h1>All Books!</h1>
+        </div>
+        <div ng-repeat="book in allBooks | orderBy:'priority'">
+            <span class="glyphicon glyphicon-thumbs-up"
+                  ng-click="incrementPri(book)"></span>
+            <span class="glyphicon glyphicon-thumbs-down"
+                  ng-click="decrementPri(book)"></span>
+                {{book.priority}}
+            <span style="font-size:20px; margin-left:10px;">
+                <span>
+                {{book.name}}
+                </span>
+            </span>
+
+        </div>
+</div>

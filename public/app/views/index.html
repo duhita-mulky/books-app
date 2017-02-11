@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>My Angular App!</title> 
+    
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <style>
+        .navbar { border-radius:0; }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
+    <script src="/app/scripts/angularApp.js"></script>
+    <script src="/app/services/bookService.js"></script>
+    <script src="/app/controllers/controller.js"></script>
+    <script src="/app/controllers/fictionController.js"></script>
+    <script src="/app/controllers/nonfictionController.js"></script>
+    <style> .glyphicon-thumbs-up { cursor:pointer } </style>
+    <style> .glyphicon-thumbs-down { cursor:pointer } </style>
+  </head>
+  <body ng-app="books">
+      <nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="#">Books WishList</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a ui-sref="home">Home</a></li>
+            <li><a ui-sref="fiction">Fiction</a></li>
+            <li><a ui-sref="nonfiction">Non Fiction</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div ui-view></div>
+    </div>
+
+  </body>
+</html>
